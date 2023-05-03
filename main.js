@@ -1,8 +1,11 @@
+// Theme switcher
 var themeSwicther = document.querySelector('.theme-switcher')
 themeSwicther.addEventListener('click', () => {
     document.querySelector('html').classList.toggle('is-dark')
 })
 
+
+// Switching tab button
 var tabBtnContainer = document.querySelector('.tabs-button').parentElement
 
 tabBtnContainer.addEventListener('click', (e) => {
@@ -20,10 +23,3 @@ function siblings(element) {
     });
     return siblings
 }
-
-
-var tabsContentContainer = document.querySelectorAll('.tabs-content')
-
-tabsContentContainer.addEventListener('mouseover', () => {
-    
-})

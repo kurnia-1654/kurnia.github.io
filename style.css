@@ -62,7 +62,7 @@ footer {
   line-height: 33px;
   color: var(--footer-text-color);
   text-align: center;
-  padding: 80px;
+  padding: 80px 20px;
   margin-top: 50px;
 }
 
@@ -113,14 +113,14 @@ span.theme-switcher svg path {
 
 .bio .bio-detail h1 {
   font-weight: 500;
-  font-size: 46px;
+  font-size: 4.6em;
   line-height: 69px;
   color: var(--1st-text-color);
 }
 
 .bio .bio-detail p {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 2.2em;
   line-height: 33px;
   color: var(--2nd-text-color);
 }
@@ -138,7 +138,8 @@ span.theme-switcher svg path {
 
 .experiences {
   display: inline-flex;
-  gap: 90px;
+  /* gap: 90px; */
+  gap: clamp(27px, 5vw, 90px);
   padding: 20px;
   max-width: 635px;
 }
@@ -157,18 +158,18 @@ span.theme-switcher svg path {
 .experiences .experience-item .item-detail {
   font-weight: 500;
   font-size: 2.2em;
-  line-height: 33px;
+  line-height: 1.5;
   color: var(--2nd-text-color);
 }
 
 button {
   all: unset;
   cursor: pointer;
-  padding: 24px 0;
+  padding: 1.1em 0;
   border-radius: var(--btn-radius);
   font-weight: 500;
-  font-size: 2.2em;
-  line-height: 1;
+  font-size: clamp(12px, 2vw, 22px);
+  line-height: 1.1;
   text-align: center;
   transition: 0.15s;
 }
@@ -180,8 +181,10 @@ button:hover {
 
 .button-wrapper {
   display: inline-flex;
-  gap: 38px;
+  gap: clamp(14px, 5vw, 38px);
   margin-top: 47px;
+  width: 100%;
+  max-width: 618px;
 }
 
 button.download-btn,
@@ -191,7 +194,8 @@ button.contact-btn {
   gap: 15px;
   align-items: center;
   justify-content: center;
-  min-width: 290px;
+  width: 50%;
+  max-width: 290px;
 }
 
 button.download-btn {
@@ -204,7 +208,7 @@ button.contact-btn {
 }
 
 button.download-btn svg {
-  height: 24px;
+  height: 1.2em;
   width: auto;
 }
 button.download-btn svg path {
@@ -214,7 +218,7 @@ button.download-btn svg path {
 /* Tabs buttons */
 
 section#tab {
-  margin-top: 80px;
+  margin-top: 8em;
 }
 
 .tabs-button-container {
@@ -222,12 +226,11 @@ section#tab {
   border-radius: var(--radius);
   padding: 15px 24px;
   display: inline-flex;
-  gap: 32px;
+  gap: clamp(10px, 4vw, 32px);
   width: 100%;
 }
 
 .tabs-button {
-  min-width: 351px;
   color: var(--3rd-text-color);
   width: 50%;
 }
@@ -237,10 +240,10 @@ section#tab {
 }
 
 .tabs-content-container {
-  margin-top: 65px;
+  margin-top: 6.5em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px 32px;
+  gap: 4.8em 3.2em;
 }
 
 .tabs-content-container img {
@@ -274,11 +277,11 @@ section#tab {
 
 .tabs-content-detail h3 {
   font-weight: 500;
-  font-size: 2.2em;
+  font-size: clamp(16px, 2vw, 22px);
 }
 .tabs-content-detail p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
 }
 
 .tabs-content-detail-link {
@@ -293,4 +296,24 @@ section#tab {
 
 .tabs-content-detail:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 560px) {
+  section {
+    padding: 0 20px;
+  }
+  .bio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body {
+    font-size: 7px;
+  }
+
+  .tabs-content-container {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
 }
