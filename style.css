@@ -17,8 +17,6 @@
   --hover-bg-color: rgba(255, 224, 113, 0.88);
   --radius: 20px;
   --btn-radius: 10px;
-  --project-radius: 20px;
-  --theme-switch-bg-color: #ffffff;
 }
 
 html.is-dark {
@@ -45,6 +43,7 @@ body {
   font-size: 10px;
   line-height: 1.2;
   background: var(--body-bg-color);
+  transition: 0.3s;
 }
 
 main,
@@ -67,12 +66,18 @@ footer {
   margin-top: 50px;
 }
 
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 span.theme-switcher {
   display: block;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: var(--theme-switch-bg-color);
+  background-color: var(--tertiary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,6 +170,12 @@ button {
   font-size: 2.2em;
   line-height: 1;
   text-align: center;
+  transition: 0.15s;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.11);
 }
 
 .button-wrapper {
@@ -184,6 +195,7 @@ button.contact-btn {
 }
 
 button.download-btn {
+  color: #3d3d3d;
   background: var(--main-color);
 }
 
@@ -196,7 +208,7 @@ button.download-btn svg {
   width: auto;
 }
 button.download-btn svg path {
-  fill: var(--1st-text-color);
+  fill: #3d3d3d;
 }
 
 /* Tabs buttons */
@@ -204,15 +216,20 @@ button.download-btn svg path {
 section#tab {
   margin-top: 80px;
 }
+
 .tabs-button-container {
   background: var(--tertiary-color);
   border-radius: var(--radius);
   padding: 15px 24px;
+  display: inline-flex;
+  gap: 32px;
+  width: 100%;
 }
 
 .tabs-button {
   min-width: 351px;
   color: var(--3rd-text-color);
+  width: 50%;
 }
 
 .tabs-button.active {
@@ -228,5 +245,52 @@ section#tab {
 
 .tabs-content-container img {
   border-radius: 15px;
+  width: 100%;
+}
+
+.tabs-content {
+  position: relative;
+}
+
+.tabs-content-detail {
+  background: var(--hover-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  padding: 40px;
+  opacity: 0;
   cursor: pointer;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.tabs-content-detail h3 {
+  font-weight: 500;
+  font-size: 2.2em;
+}
+.tabs-content-detail p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tabs-content-detail-link {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url(res/icon/ic-link.svg) no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.tabs-content-detail:hover {
+  opacity: 1;
 }
