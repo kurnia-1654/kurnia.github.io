@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://kurnia-dev.github.io/portfolio",
+  "homepage": "https://kurnia-dev.github.io/",
   "private": true,
   "dependencies": {
     "@fontsource/poppins": "^5.0.7",
