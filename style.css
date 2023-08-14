@@ -566,28 +566,15 @@ body {
   /* transform: translate(0, -109%); */
 }
 
-.tilt {
-  all: unset;
-  background: none !important;
-  box-shadow: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+/* .bounce-linear {
+        animation: bounce 2s linear infinite;
+        animation-delay: var(--delay);
+    }
 
-.bounce-linear {
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
-  -webkit-animation-delay: var(--delay);
-          animation-delay: var(--delay);
-}
-
-.wave {
-  -webkit-animation: wave 3s linear infinite;
-          animation: wave 3s linear infinite;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-}
+    .wave {
+        animation: wave 3s linear infinite;
+        transform-origin: bottom right;
+    } */
 
 @-webkit-keyframes bounce {
   0% {
