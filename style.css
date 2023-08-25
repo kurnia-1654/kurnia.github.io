@@ -434,9 +434,10 @@ video {
   display: none;
 }
 
-:root {
+body {
+  /* Declare variable on the body to override variable from :root element declared by browser theme */
   --main-text-color: #25323D;
-  --text-color:#58748A;
+  --text-color:#58748a;
   --accent-color : #AF48FF;
   --main-bg-color: #F5EDFF;
   --body-bg: linear-gradient(180deg, #F8F2FF 0%, rgba(250, 250, 250, 0.00) 41.59%);
@@ -446,9 +447,6 @@ video {
   --footer-bg-color: #FBF8FF9C;
   --project-type-color: #22AD59;
   --tech-shadow:  0px 22.941890716552734px 13.76513385772705px 0px rgba(0, 59, 108, 0.06);
-}
-
-body {
   font-family: Inter, system-ui;
 }
 
@@ -879,6 +877,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1326,10 +1328,6 @@ body {
 
 .text-\[var\(--project-type-color\)\] {
   color: var(--project-type-color);
-}
-
-.text-\[var\(--text-color\)\] {
-  color: var(--text-color);
 }
 
 .text-white {
